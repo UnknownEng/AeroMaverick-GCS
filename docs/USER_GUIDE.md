@@ -10,7 +10,7 @@
 3. Run `AeroMaverick GCS.exe`. No installation or admin rights are needed.
 
 **Android 8.0+ (64-bit)**
-1. Download `AeroMaverick-GCS-1.0.0.apk` on the phone, or copy it over.
+1. Download `AeroMaverick-GCS-1.0.1.apk` on the phone, or copy it over.
 2. Tap it and allow *Install unknown apps* when asked.
 3. Open **AeroMaverick GCS**. The first start can take up to 30 seconds.
 
@@ -53,7 +53,10 @@ The GCS detects ROS 1 or ROS 2 automatically. It uses only MAVROS topics and ser
 * **Arm / Disarm**, **Takeoff** to the chosen altitude, **Start Mission**, **Pause / Hold**, **RTL**, **Land**.
 * **Set speed** and **Change alt** while flying.
 * **Right-click** (desktop) or **long-press** (phone) the map: *Go to here*, *Point camera (ROI) here*, *Set home here*.
-* **Joystick:** connect a gamepad, then press *Joystick: off* to turn it on. It sends MANUAL_CONTROL (mode 2 layout).
+* **Joystick:** connect a gamepad, then press *Joystick: off* to turn it on. It sends MANUAL_CONTROL (mode 2 layout:
+  left stick throttle / yaw, right stick pitch / roll), over MAVLink or MAVROS. Use a stick mode such as *Loiter* /
+  *PosHold* (ArduPilot) or *Position* (PX4). ArduPilot shows the joystick as RC overrides on the radio bars. If the
+  joystick stops while PX4 is in Position mode, PX4 starts its manual-control-loss failsafe (return or land).
 * **KILL** stops the motors immediately, even in the air. Use it only in an emergency.
 * On phones, ☰ hides the controls for a full-screen map.
 
@@ -86,7 +89,12 @@ The GCS detects ROS 1 or ROS 2 automatically. It uses only MAVROS topics and ser
     ArduPilot will not arm until it is rebooted: press **Reboot autopilot**.
   * PX4 accelerometer / compass: hold the vehicle still in each position PX4 asks for. PX4 only notices a cancel
     between positions, so it can take a few seconds.
-* **Radio inputs** and **Servo / motor outputs** show live bars.
+* **Radio inputs** and **Servo / motor outputs** show live bars (also through MAVROS `rc/in` and `rc/out`).
+* **Calibrate radio** (under Radio inputs; remove the propellers first): move every stick and switch to both ends until
+  each channel shows a ✓, then centre the sticks, put the throttle low and press **Save**. This stores `RCx_MIN`,
+  `RCx_MAX` and `RCx_TRIM` on ArduPilot and PX4. Do it once for every new transmitter or receiver.
+* **Radio trim**: centre the sticks, then press it. ArduPilot stores the stick centres as `RCx_TRIM`; PX4 runs its
+  own RC trim calibration.
 * **Motor test**: remove the propellers, tick the confirmation box, then spin one motor or all of them in sequence.
 * **Safety & quick settings** covers return altitude, speeds, battery and link-loss actions, and the geofence. Press **Write settings**.
 * **Reboot autopilot** and **Set home = current**.
@@ -99,7 +107,19 @@ The GCS detects ROS 1 or ROS 2 automatically. It uses only MAVROS topics and ser
   * Windows: `Documents\AeroMaverick\logs`, or `%APPDATA%\AeroMaverick\files\logs` if Windows blocks Documents
   * Android: `Android/data/com.aeromaverick.gcs/files/logs`
 
-## 9. Troubleshooting
+## 9. Updates
+
+From version 1.0.1 the app checks for a newer release a few seconds after it starts (when the device is online). If
+there is one, an **Update to vX.Y.Z** button appears in the top bar. You can also press **Check for updates** in the 🔑
+licence dialog.
+
+* **Windows:** the button downloads the new zip. Unzip it and start the new `AeroMaverick GCS.exe`.
+* **Android:** the button downloads the new `.apk`. Open it to install over the old app.
+
+Your licence is kept on the same computer or phone. The check reads only the public release page; nothing about you,
+your licence or your device is sent. Version 1.0.0 has no update check, so 1.0.0 users install 1.0.1 by hand once.
+
+## 10. Troubleshooting
 
 | Problem | Fix |
 |---|---|
@@ -107,6 +127,8 @@ The GCS detects ROS 1 or ROS 2 automatically. It uses only MAVROS topics and ser
 | UDP shows nothing | Allow AeroMaverick through Windows Firewall, and check the vehicle sends to this PC's IP on port 14550. |
 | USB-OTG says permission requested | Tap **Allow** in the Android prompt, then press **Connect** again. |
 | MAVROS: cannot reach rosbridge | Start rosbridge on the robot and check the IP / port 9090 and the firewall. |
+| Joystick does nothing through MAVROS (ArduPilot) | ArduPilot only takes stick input from its GCS system ID (255). MAVROS sends as system 1. On ArduPilot 4.7+ set `MAV_GCS_SYSID` = 1 and `MAV_GCS_SYSID_HI` = 255 so both count as GCS (older firmware: `SYSID_MYGCS` = 1). The app shows this hint the first time you use the joystick. |
+| Arming refused with "RC calibrating" (ArduPilot) | Caused by Radio trim in AeroMaverick 1.0.0. Press **Cancel cal** in Setup or reboot the autopilot, then update to 1.0.1. |
 | Licence is locked to another computer | Each device needs its own licence; send the Machine ID shown on this device. |
 
 ---

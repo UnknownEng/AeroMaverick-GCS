@@ -25,9 +25,10 @@ combines the depth of Mission Planner with the simplicity of QGroundControl. It 
 | **Fly** | Satellite / street / topo maps, artificial horizon HUD, 15 live telemetry tiles, one-tap arm, takeoff, mission, hold, RTL and land, *go to here*, ROI, set home, joystick control, emergency stop. |
 | **Plan** | Click-to-add waypoints, 20+ mission commands, **survey grid generator**, **geofence**, **rally points**. Opens and saves QGroundControl `.plan` and Mission Planner `.waypoints` files. |
 | **Parameters** | The official PX4 and ArduPilot documentation is built in: descriptions, units, ranges, dropdowns, bitmask editor and defaults. Values are checked against type and range before they are written. Load files with a diff preview; save `.params` / `.param`. |
-| **Setup** | Gyro, accelerometer (incl. ArduPilot 6-position), compass with progress, level, baro, airspeed, radio trim, ESC calibration, RC and servo monitors, motor test, failsafe quick settings. |
+| **Setup** | Gyro, accelerometer (incl. ArduPilot 6-position), compass with progress, level, baro, airspeed, **radio calibration** and trim, ESC calibration, RC and servo monitors, motor test, failsafe quick settings. |
 | **Analyze** | Colour-coded message log, live MAVLink inspector, automatic `.tlog` telemetry recording. |
 | **Licensing** | Offline, hardware-locked, cryptographically signed licences, in Basic, Pro and Enterprise editions. |
+| **Updates** | The app tells you when a new version is out (from 1.0.1). |
 
 ## Screenshots
 
@@ -50,7 +51,7 @@ Go to **[Releases](https://github.com/UnknownEng/AeroMaverick-GCS/releases/lates
 | File | Platform |
 |---|---|
 | `AeroMaverick-GCS-Windows.zip` | Windows 10 / 11 (64-bit). Unzip it and run `AeroMaverick GCS.exe`. Nothing to install. |
-| `AeroMaverick-GCS-1.0.0.apk` | Android 8.0+ (64-bit phones / tablets). Open it on the phone and allow "install unknown apps". |
+| `AeroMaverick-GCS-1.0.1.apk` | Android 8.0+ (64-bit phones / tablets). Open it on the phone and allow "install unknown apps". |
 | `SHA256SUMS.txt` | Checksums to verify your download |
 
 Then:
@@ -76,13 +77,15 @@ For licences, pricing and support, visit **[maverick-technologies.vercel.app](ht
 
 ## Quality
 
-Every build runs **171 automated end-to-end checks** against simulated PX4 and ArduPilot vehicles and simulated MAVROS
-(ROS 1 + ROS 2). They cover every connection type, every calibration, every parameter type, missions, geofence and
-rally points, the full flight sequence and licence security, on both Windows and Android.
+Every build runs **200+ automated end-to-end checks** against simulated PX4 and ArduPilot vehicles and simulated MAVROS
+(ROS 1 + ROS 2). They cover every connection type, every calibration including the radio, RC inputs and joystick
+flying, every parameter type, missions, geofence and rally points, the full flight sequence and licence security, on
+both Windows and Android.
 
 It is also verified against the **real autopilot firmware**: ArduCopter and PX4 running as SITL, over direct MAVLink and
 through a real **ROS 2 MAVROS** with rosbridge. That covers parameters, calibrations, missions, geofence, rally points and
-complete flights (takeoff, go-to, mission, RTL, landing).
+complete flights (takeoff, go-to, mission, RTL, landing), plus a simulated RC transmitter: radio calibration, flying on
+the sticks, joystick override and the radio failsafe.
 
 > ⚠️ **Safety.** Unmanned aircraft are dangerous. Always do a props-off bench test after changing parameters or
 > calibrating, and fly within the law and your local regulations.
