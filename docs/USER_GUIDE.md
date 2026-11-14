@@ -109,15 +109,25 @@ The GCS detects ROS 1 or ROS 2 automatically. It uses only MAVROS topics and ser
 
 ## 9. Updates
 
-From version 1.0.1 the app checks for a newer release a few seconds after it starts (when the device is online). If
-there is one, an **Update to vX.Y.Z** button appears in the top bar. You can also press **Check for updates** in the 🔑
-licence dialog.
+From version 1.0.1 AeroMaverick updates itself. It checks for a newer release a few seconds after it starts and every
+6 hours while it runs (when the device is online). If there is one, an **Update to vX.Y.Z** button appears in the top
+bar. You can also press **Check for updates** in the 🔑 licence dialog, or untick **Check for updates automatically**
+there.
 
-* **Windows:** the button downloads the new zip. Unzip it and start the new `AeroMaverick GCS.exe`.
-* **Android:** the button downloads the new `.apk`. Open it to install over the old app.
+Press the button and confirm. The app downloads the update with a progress bar and checks it, then:
 
-Your licence is kept on the same computer or phone. The check reads only the public release page; nothing about you,
-your licence or your device is sent. Version 1.0.0 has no update check, so 1.0.0 users install 1.0.1 by hand once.
+* **Windows:** closes, installs the new version in the same folder (the old one is kept as a backup), and starts
+  again by itself.
+* **Android:** opens the Android installer. Tap **Update**. The first time, Android may ask you to allow AeroMaverick to
+  install apps.
+
+**Safety.** An update is installed only if it is signed by Maverick Technologies and its checksum matches, so a
+damaged or fake download is refused. Updating is refused while the vehicle is armed: land and disarm first. Your
+licence, settings, missions and logs are kept.
+
+The check reads only the public release page; nothing about you, your licence or your device is sent. If the app
+folder is not writable (for example under `Program Files`), the button opens the download page instead. Version 1.0.0
+has no update check, so 1.0.0 users install 1.0.1 by hand once.
 
 ## 10. Troubleshooting
 
