@@ -1,0 +1,28 @@
+AeroMaverick GCS - End User Licence Agreement
+Copyright (c) 2026 Maverick Technologies. All rights reserved.
+
+1. The AeroMaverick GCS application, its compiled binaries, user interface, documentation, images and
+   videos in this repository are the property of Maverick Technologies.
+
+2. You may download the binaries published in this repository's Releases and use them on a device for
+   which you hold a valid AeroMaverick GCS licence key issued by Maverick Technologies. Without a valid
+   licence key the software runs only its activation screen.
+
+3. You may not copy, sell, rent, sublicense, modify, decompile, reverse engineer, or create derivative
+   works of the software, or try to bypass its licence protection, except as expressly permitted by
+   applicable law.
+
+4. Licence keys are bound to a single device (Machine ID) and may not be shared or transferred without
+   written permission from Maverick Technologies.
+
+5. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. IN NO EVENT SHALL
+   MAVERICK TECHNOLOGIES BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING DAMAGE TO
+   AIRCRAFT, PROPERTY OR PERSONS, ARISING FROM THE USE OF THE SOFTWARE. Operating unmanned vehicles is
+   dangerous; the operator is solely responsible for safe and lawful operation.
+
+6. The software includes third-party open-source components, each used under its own licence
+   (pymavlink LGPL-3.0, Leaflet BSD-2-Clause, Starlette / Uvicorn BSD-3-Clause, cryptography Apache-2.0 / BSD,
+   Chaquopy MIT, usb-serial-for-android MIT, PX4 and ArduPilot parameter metadata). Map imagery is provided
+   by Esri, OpenStreetMap contributors and OpenTopoMap under their terms of use.
+
+Contact: https://maverick-technologies.vercel.app
