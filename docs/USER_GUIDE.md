@@ -78,10 +78,14 @@ The GCS detects ROS 1 or ROS 2 automatically. It uses only MAVROS topics and ser
 
 ## 7. Setup
 
-* **Sensor calibration**: Gyroscope, Accelerometer, Level horizon, Compass, Barometer, Airspeed, Radio trim, ESC.
-  Follow the messages in the log under the buttons.
-  * ArduPilot accelerometer: place the vehicle as asked and press **Done – next position** six times.
-  * ArduPilot compass: progress bars appear. Rotate the vehicle, then **Accept**.
+* **Sensor calibration**: Gyroscope, Accelerometer, Level horizon, Compass, Barometer (ArduPilot only; PX4 calibrates
+  it automatically from GPS), Airspeed, Radio trim, ESC. Follow the messages in the log under the buttons.
+  * ArduPilot accelerometer: place the vehicle as asked and press **Done – next position** six times. ArduPilot cannot
+    stop an accelerometer calibration halfway, so **Cancel** reboots the autopilot.
+  * ArduPilot compass: progress bars appear. Rotate the vehicle, then **Accept**. After any compass calibration
+    ArduPilot will not arm until it is rebooted: press **Reboot autopilot**.
+  * PX4 accelerometer / compass: hold the vehicle still in each position PX4 asks for. PX4 only notices a cancel
+    between positions, so it can take a few seconds.
 * **Radio inputs** and **Servo / motor outputs** show live bars.
 * **Motor test**: remove the propellers, tick the confirmation box, then spin one motor or all of them in sequence.
 * **Safety & quick settings** covers return altitude, speeds, battery and link-loss actions, and the geofence. Press **Write settings**.

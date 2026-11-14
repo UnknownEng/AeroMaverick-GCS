@@ -80,6 +80,10 @@ Every build runs **171 automated end-to-end checks** against simulated PX4 and A
 (ROS 1 + ROS 2). They cover every connection type, every calibration, every parameter type, missions, geofence and
 rally points, the full flight sequence and licence security, on both Windows and Android.
 
+It is also verified against the **real autopilot firmware**: ArduCopter and PX4 running as SITL, over direct MAVLink and
+through a real **ROS 2 MAVROS** with rosbridge. That covers parameters, calibrations, missions, geofence, rally points and
+complete flights (takeoff, go-to, mission, RTL, landing).
+
 > ⚠️ **Safety.** Unmanned aircraft are dangerous. Always do a props-off bench test after changing parameters or
 > calibrating, and fly within the law and your local regulations.
 
