@@ -69,7 +69,7 @@ Go to **[Releases](https://github.com/UnknownEng/AeroMaverick-GCS/releases/lates
 | File | Platform |
 |---|---|
 | `AeroMaverick-GCS-Windows.zip` | Windows 10 / 11 (64-bit). Unzip it and run `AeroMaverick GCS.exe`. Nothing to install. |
-| `AeroMaverick-GCS-1.1.0.apk` | Android 8.0+ (64-bit phones / tablets). Open it on the phone and allow "install unknown apps". |
+| `AeroMaverick-GCS-1.1.1.apk` | Android 8.0+ (64-bit phones / tablets). Open it on the phone and allow "install unknown apps". |
 | `SHA256SUMS.txt` | Checksums to verify your download |
 
 Then:
