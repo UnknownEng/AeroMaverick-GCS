@@ -7,6 +7,7 @@ by <a href="https://maverick-technologies.vercel.app">Maverick Technologies</a><
 <p align="center">
   <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/latest"><b>⬇ Download for Windows</b></a> &nbsp;·&nbsp;
   <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/latest"><b>⬇ Download for Android</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.1.0/AeroMaverick-GCS-1.1-Whats-New-4K.mp4"><b>▶ What's new in 1.1 (4K)</b></a> &nbsp;·&nbsp;
   <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.0.1/AeroMaverick-GCS-Pitch.mp4">▶ Pitch video (2 min)</a> &nbsp;·&nbsp;
   <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.0.1/AeroMaverick-GCS-Full-Demo.mp4">▶ Full demo (5 min)</a> &nbsp;·&nbsp;
   <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.0.1/AeroMaverick-GCS-Full-Demo-4K.mp4">▶ Full demo in 4K</a>
@@ -17,6 +18,15 @@ by <a href="https://maverick-technologies.vercel.app">Maverick Technologies</a><
 AeroMaverick GCS is a professional ground control station for **PX4** and **ArduPilot** aircraft, rovers, boats and subs. It
 combines the depth of Mission Planner with the simplicity of QGroundControl. It connects **directly over MAVLink** or
 **through MAVROS (ROS 1 and ROS 2)**, and the same engine runs on **Windows** and **Android**.
+
+## What's new in 1.1
+
+<p align="center"><a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.1.0/AeroMaverick-GCS-1.1-Whats-New-4K.mp4"><img src="media/whats-new-1.1.jpg" alt="Watch: What's new in AeroMaverick GCS 1.1 (4K video)" width="80%"></a></p>
+
+Multi-vehicle **swarms** (centralised formations and decentralised onboard follow), **Python and Lua scripting**, **flight
+log analysis**, **live camera video**, setup for **every vehicle type** with a **custom frame editor**, **terrain
+following**, a **DroneCAN inspector** and **firmware installation**. Watch the 4-minute video above, or read the
+[release notes](https://github.com/UnknownEng/AeroMaverick-GCS/releases/tag/v1.1.0).
 
 ## Highlights
 
