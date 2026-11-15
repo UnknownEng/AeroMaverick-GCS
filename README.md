@@ -7,8 +7,9 @@ by <a href="https://maverick-technologies.vercel.app">Maverick Technologies</a><
 <p align="center">
   <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/latest"><b>⬇ Download for Windows</b></a> &nbsp;·&nbsp;
   <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/latest"><b>⬇ Download for Android</b></a> &nbsp;·&nbsp;
-  <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/latest/download/AeroMaverick-GCS-Pitch.mp4">▶ Pitch video (2 min)</a> &nbsp;·&nbsp;
-  <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/latest/download/AeroMaverick-GCS-Full-Demo.mp4">▶ Full demo (5 min)</a>
+  <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.0.1/AeroMaverick-GCS-Pitch.mp4">▶ Pitch video (2 min)</a> &nbsp;·&nbsp;
+  <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.0.1/AeroMaverick-GCS-Full-Demo.mp4">▶ Full demo (5 min)</a> &nbsp;·&nbsp;
+  <a href="https://github.com/UnknownEng/AeroMaverick-GCS/releases/download/v1.0.1/AeroMaverick-GCS-Full-Demo-4K.mp4">▶ Full demo in 4K</a>
 </p>
 
 <p align="center"><img src="media/preview.gif" alt="AeroMaverick GCS in action" width="90%"></p>
